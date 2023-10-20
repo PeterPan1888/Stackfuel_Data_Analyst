@@ -1,0 +1,300 @@
+[33mcommit ecfd065741aaf2ed94c8bc06261d0cafc971af7e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: PeterPan1888 <banarne78@web.de>
+Date:   Fri Oct 20 15:24:33 2023 +0200
+
+    2023-10-20-´1524
+
+[1mdiff --git a/.ipynb_checkpoints/DA_Course_Cleaning-checkpoint.ipynb b/.ipynb_checkpoints/DA_Course_Cleaning-checkpoint.ipynb[m
+[1mindex f689a70..6ebf354 100644[m
+[1m--- a/.ipynb_checkpoints/DA_Course_Cleaning-checkpoint.ipynb[m
+[1m+++ b/.ipynb_checkpoints/DA_Course_Cleaning-checkpoint.ipynb[m
+[36m@@ -2,7 +2,7 @@[m
+  "cells": [[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 53,[m
+[32m+[m[32m   "execution_count": 87,[m
+    "id": "5522b1cb-ac94-4c21-a8b7-4d00dccacff7",[m
+    "metadata": {[m
+     "tags": [][m
+[36m@@ -26,11 +26,19 @@[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\electricity-fossil-fuels.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\electricity-production-by-source.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\energy-consumption-by-source-and-country.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\energy-intensity (1).csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\energy-intensity.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\installed-global-renewable-energy-capacity-by-technology.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\levelized-cost-of-energy.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\low-carbon-electricity.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\national-gdp-constant-usd-wb portfolio.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\renewable-energy-investment-of-gdp.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\renewable-share-energy (2).csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\renewable-share-energy.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\share-of-electricity-production-from-renewable-sources.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\solar-pv-cumulative-capacity.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\total-ghg-emissions.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\wind-energy-consumption-vs-installed-wind-energy-capacity.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\wind-generation.csv\n",[m
+       "\n",[m
+       "Dateien mit Fehlern:\n"[m
+[36m@@ -40,49 +48,48 @@[m
+    "source": [[m
+     "## Only run the script if something went wrong with setting the quotes for the entity column\n",[m
+     "\n",[m
+[31m-    "#import os\n",[m
+[31m-    "#import pandas as pd\n",[m
+[31m-    "#import glob\n",[m
+[31m-    "#\n",[m
+[31m-    "## Verzeichnis definieren\n",[m
+[31m-    "#path = r\"C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\*.csv\"\n",[m
+[31m-    "#\n",[m
+[31m-    "## Liste aller CSV-Dateien im Verzeichnis mit glob\n",[m
+[31m-    "#all_files = glob.glob(path)\n",[m
+[31m-    "#\n",[m
+[31m-    "## Listen zum Speichern der Dateinamen\n",[m
+[31m-    "#successful_files = []\n",[m
+[31m-    "#error_files = []\n",[m
+[31m-    "#\n",[m
+[31m-    "#for file in all_files:\n",[m
+[31m-    "#    try:\n",[m
+[31m-    "#        # Zeilenweise Datei einlesen und bearbeiten\n",[m
+[31m-    "#        with open(file, 'r', encoding='utf-8') as f:\n",[m
+[31m-    "#            lines = f.readlines()\n",[m
+[31m-    "#            new_lines = [line.replace('\"', '') for line in lines]\n",[m
+[31m-    "#\n",[m
+[31m-    "#        # Geänderte Zeilen zurück in Datei schreiben\n",[m
+[31m-    "#        with open(file, 'w', encoding='utf-8') as f:\n",[m
+[31m-    "#            f.writelines(new_lines)\n",[m
+[31m-    "#\n",[m
+[31m-    "#        successful_files.append(file)\n",[m
+[31m-    "#    except Exception as e:\n",[m
+[31m-    "#        print(f\"Fehler beim Bearbeiten der Datei {file}: {e}\")\n",[m
+[31m-    "#        error_files.append(file)\n",[m
+[31m-    "#\n",[m
+[31m-    "#print(\"\\nErfolgreich bearbeitete Dateien:\")\n",[m
+[31m-    "#for f in successful_files:\n",[m
+[31m-    "#    print(f)\n",[m
+[31m-    "#\n",[m
+[31m-    "#print(\"\\nDateien mit Fehlern:\")\n",[m
+[31m-    "#for f in error_files:\n",[m
+[31m-    "#    print(f)\n",[m
+[31m-    "#"[m
+[32m+[m[32m    "import os\n",[m
+[32m+[m[32m    "import pandas as pd\n",[m
+[32m+[m[32m    "import glob\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "# Verzeichnis definieren\n",[m
+[32m+[m[32m    "path = r\"C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\*.csv\"\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "# Liste aller CSV-Dateien im Verzeichnis mit glob\n",[m
+[32m+[m[32m    "all_files = glob.glob(path)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "# Listen zum Speichern der Dateinamen\n",[m
+[32m+[m[32m    "successful_files = []\n",[m
+[32m+[m[32m    "error_files = []\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "for file in all_files:\n",[m
+[32m+[m[32m    "    try:\n",[m
+[32m+[m[32m    "        # Zeilenweise Datei einlesen und bearbeiten\n",[m
+[32m+[m[32m    "        with open(file, 'r', encoding='utf-8') as f:\n",[m
+[32m+[m[32m    "            lines = f.readlines()\n",[m
+[32m+[m[32m    "            new_lines = [line.replace('\"', '') for line in lines]\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "        # Geänderte Zeilen zurück in Datei schreiben\n",[m
+[32m+[m[32m    "        with open(file, 'w', encoding='utf-8') as f:\n",[m
+[32m+[m[32m    "            f.writelines(new_lines)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "        successful_files.append(file)\n",[m
+[32m+[m[32m    "    except Exception as e:\n",[m
+[32m+[m[32m    "        print(f\"Fehler beim Bearbeiten der Datei {file}: {e}\")\n",[m
+[32m+[m[32m    "        error_files.append(file)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "print(\"\\nErfolgreich bearbeitete Dateien:\")\n",[m
+[32m+[m[32m    "for f in successful_files:\n",[m
+[32m+[m[32m    "    print(f)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "print(\"\\nDateien mit Fehlern:\")\n",[m
+[32m+[m[32m    "for f in error_files:\n",[m
+[32m+[m[32m    "    print(f)\n"[m
+    ][m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 61,[m
+[32m+[m[32m   "execution_count": 88,[m
+    "id": "2d3026b3-dfe0-4cdf-8521-9e586bd7a0c4",[m
+    "metadata": {[m
+     "tags": [][m
+[36m@@ -92,8 +99,6 @@[m
+      "name": "stdout",[m
+      "output_type": "stream",[m
+      "text": [[m
+[31m-      "Fehler beim Bearbeiten der Datei C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\world_investment_report_2022_selected_fdi_flows.csv: Error tokenizing data. C error: Expected 146 fields in line 5, saw 155\n",[m
+[31m-      "\n",[m
+       "\n",[m
+       "Erfolgreich bearbeitete Dateien:\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\002-annual-co2-emissions-per-country.csv\n",[m
+[36m@@ -123,13 +128,13 @@[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\wind-energy-consumption-vs-installed-wind-energy-capacity.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\wind-generation.csv\n",[m
+       "\n",[m
+[31m-      "Dateien mit Fehlern:\n",[m
+[31m-      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\world_investment_report_2022_selected_fdi_flows.csv\n"[m
+[32m+[m[32m      "Dateien mit Fehlern:\n"[m
+      ][m
+     }[m
+    ],[m
+    "source": [[m
+[31m-    "## Setting the quotation marks for the entity column\n",[m
+[32m+[m[32m    "## Setting the quotation marks for the entity column. Only hit one times,\n",[m
+[32m+[m[32m    "## otherwise, you have 2,3 quotation mark\n",[m
+     "\n",[m
+     "import os\n",[m
+     "import pandas as pd\n",[m
+[1mdiff --git a/DA_Course_Cleaning.ipynb b/DA_Course_Cleaning.ipynb[m
+[1mindex f689a70..6ebf354 100644[m
+[1m--- a/DA_Course_Cleaning.ipynb[m
+[1m+++ b/DA_Course_Cleaning.ipynb[m
+[36m@@ -2,7 +2,7 @@[m
+  "cells": [[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 53,[m
+[32m+[m[32m   "execution_count": 87,[m
+    "id": "5522b1cb-ac94-4c21-a8b7-4d00dccacff7",[m
+    "metadata": {[m
+     "tags": [][m
+[36m@@ -26,11 +26,19 @@[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\electricity-fossil-fuels.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\electricity-production-by-source.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\energy-consumption-by-source-and-country.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\energy-intensity (1).csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\energy-intensity.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\installed-global-renewable-energy-capacity-by-technology.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\levelized-cost-of-energy.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\low-carbon-electricity.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\national-gdp-constant-usd-wb portfolio.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\renewable-energy-investment-of-gdp.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\renewable-share-energy (2).csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\renewable-share-energy.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\share-of-electricity-production-from-renewable-sources.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\solar-pv-cumulative-capacity.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\total-ghg-emissions.csv\n",[m
+[32m+[m[32m      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\wind-energy-consumption-vs-installed-wind-energy-capacity.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\wind-generation.csv\n",[m
+       "\n",[m
+       "Dateien mit Fehlern:\n"[m
+[36m@@ -40,49 +48,48 @@[m
+    "source": [[m
+     "## Only run the script if something went wrong with setting the quotes for the entity column\n",[m
+     "\n",[m
+[31m-    "#import os\n",[m
+[31m-    "#import pandas as pd\n",[m
+[31m-    "#import glob\n",[m
+[31m-    "#\n",[m
+[31m-    "## Verzeichnis definieren\n",[m
+[31m-    "#path = r\"C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\*.csv\"\n",[m
+[31m-    "#\n",[m
+[31m-    "## Liste aller CSV-Dateien im Verzeichnis mit glob\n",[m
+[31m-    "#all_files = glob.glob(path)\n",[m
+[31m-    "#\n",[m
+[31m-    "## Listen zum Speichern der Dateinamen\n",[m
+[31m-    "#successful_files = []\n",[m
+[31m-    "#error_files = []\n",[m
+[31m-    "#\n",[m
+[31m-    "#for file in all_files:\n",[m
+[31m-    "#    try:\n",[m
+[31m-    "#        # Zeilenweise Datei einlesen und bearbeiten\n",[m
+[31m-    "#        with open(file, 'r', encoding='utf-8') as f:\n",[m
+[31m-    "#            lines = f.readlines()\n",[m
+[31m-    "#            new_lines = [line.replace('\"', '') for line in lines]\n",[m
+[31m-    "#\n",[m
+[31m-    "#        # Geänderte Zeilen zurück in Datei schreiben\n",[m
+[31m-    "#        with open(file, 'w', encoding='utf-8') as f:\n",[m
+[31m-    "#            f.writelines(new_lines)\n",[m
+[31m-    "#\n",[m
+[31m-    "#        successful_files.append(file)\n",[m
+[31m-    "#    except Exception as e:\n",[m
+[31m-    "#        print(f\"Fehler beim Bearbeiten der Datei {file}: {e}\")\n",[m
+[31m-    "#        error_files.append(file)\n",[m
+[31m-    "#\n",[m
+[31m-    "#print(\"\\nErfolgreich bearbeitete Dateien:\")\n",[m
+[31m-    "#for f in successful_files:\n",[m
+[31m-    "#    print(f)\n",[m
+[31m-    "#\n",[m
+[31m-    "#print(\"\\nDateien mit Fehlern:\")\n",[m
+[31m-    "#for f in error_files:\n",[m
+[31m-    "#    print(f)\n",[m
+[31m-    "#"[m
+[32m+[m[32m    "import os\n",[m
+[32m+[m[32m    "import pandas as pd\n",[m
+[32m+[m[32m    "import glob\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "# Verzeichnis definieren\n",[m
+[32m+[m[32m    "path = r\"C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\*.csv\"\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "# Liste aller CSV-Dateien im Verzeichnis mit glob\n",[m
+[32m+[m[32m    "all_files = glob.glob(path)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "# Listen zum Speichern der Dateinamen\n",[m
+[32m+[m[32m    "successful_files = []\n",[m
+[32m+[m[32m    "error_files = []\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "for file in all_files:\n",[m
+[32m+[m[32m    "    try:\n",[m
+[32m+[m[32m    "        # Zeilenweise Datei einlesen und bearbeiten\n",[m
+[32m+[m[32m    "        with open(file, 'r', encoding='utf-8') as f:\n",[m
+[32m+[m[32m    "            lines = f.readlines()\n",[m
+[32m+[m[32m    "            new_lines = [line.replace('\"', '') for line in lines]\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "        # Geänderte Zeilen zurück in Datei schreiben\n",[m
+[32m+[m[32m    "        with open(file, 'w', encoding='utf-8') as f:\n",[m
+[32m+[m[32m    "            f.writelines(new_lines)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "        successful_files.append(file)\n",[m
+[32m+[m[32m    "    except Exception as e:\n",[m
+[32m+[m[32m    "        print(f\"Fehler beim Bearbeiten der Datei {file}: {e}\")\n",[m
+[32m+[m[32m    "        error_files.append(file)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "print(\"\\nErfolgreich bearbeitete Dateien:\")\n",[m
+[32m+[m[32m    "for f in successful_files:\n",[m
+[32m+[m[32m    "    print(f)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "print(\"\\nDateien mit Fehlern:\")\n",[m
+[32m+[m[32m    "for f in error_files:\n",[m
+[32m+[m[32m    "    print(f)\n"[m
+    ][m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 61,[m
+[32m+[m[32m   "execution_count": 88,[m
+    "id": "2d3026b3-dfe0-4cdf-8521-9e586bd7a0c4",[m
+    "metadata": {[m
+     "tags": [][m
+[36m@@ -92,8 +99,6 @@[m
+      "name": "stdout",[m
+      "output_type": "stream",[m
+      "text": [[m
+[31m-      "Fehler beim Bearbeiten der Datei C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\world_investment_report_2022_selected_fdi_flows.csv: Error tokenizing data. C error: Expected 146 fields in line 5, saw 155\n",[m
+[31m-      "\n",[m
+       "\n",[m
+       "Erfolgreich bearbeitete Dateien:\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\002-annual-co2-emissions-per-country.csv\n",[m
+[36m@@ -123,13 +128,13 @@[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\wind-energy-consumption-vs-installed-wind-energy-capacity.csv\n",[m
+       "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\wind-generation.csv\n",[m
+       "\n",[m
+[31m-      "Dateien mit Fehlern:\n",[m
+[31m-      "C:\\Users\\Alpha\\OneDrive - Seolotsen\\03_SEO\\01_1_Data Analyst Portfolio\\Git_Repo\\Stackfuel_Data_Analyst\\01_CSV_Ressources\\world_investment_report_2022_selected_fdi_flows.csv\n"[m
+[32m+[m[32m      "Dateien mit Fehlern:\n"[m
+      ][m
+     }[m
+    ],[m
+    "source": [[m
+[31m-    "## Setting the quotation marks for the entity column\n",[m
+[32m+[m[32m    "## Setting the quotation marks for the entity column. Only hit one times,\n",[m
+[32m+[m[32m    "## otherwise, you have 2,3 quotation mark\n",[m
+     "\n",[m
+     "import os\n",[m
+     "import pandas as pd\n",[m
