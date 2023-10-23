@@ -1,6 +1,8 @@
 # Renewable Energy Analysis
 ### Highlighting the importance of carbon dioxide reduction and the growth of the renewable energy sector
 
+**Note**: This is a practice portfolio project after the Stackfuel GmbH post exam to become a "certified Data Analyst - Python".
+
 ## Problem Description
 This project aims to shed light on the critical concerns related to carbon dioxide emissions, global warming, and the emergent renewable energy sector. By analyzing data and trends, we hope to provide insights and solutions to combat global warming and promote sustainable energy.
 
@@ -17,3 +19,11 @@ Our approach to this project involves:
 
 ## Project Tools
 The primary tool used for data analysis in this project is a Jupyter Notebook titled `DA_Course_Cleaning.ipynb`. This notebook contains all the data cleaning, preprocessing, and analysis steps.
+
+## Tasks
+- Finding a Team, Topic and Ressources
+- Data Collection and Cleaning
+- Exploratory Data Analysis
+- Visualization and Reporting
+- Prediction and Forecasting
+- Final Presenttation and Exam
