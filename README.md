@@ -13,24 +13,25 @@ This project aims to shed light on the critical concerns related to carbon dioxi
 
 ## Approach
 Our approach to this project involves:
-1. Collecting data on energy consumption, CO2 emissions, and renewable energy growth.
+1. Collecting data on energy consumption, CO2 emissions, and renewable energy growth from Datasets issued mainly from the Portal "Ourworldindata" (https://ourworldindata.org/), Search engine "Google Dataset Search" and International Energy Agency/IEA (https://www.iea.org/).
 2. Analyzing the collected data to identify trends and patterns.
-3. Presenting our findings in an intuitive and easy-to-understand format.
-3.1 Interactive Graphs and Maps used for the Visualisations:
+3. Presenting our findings in an intuitive and easy-to-understand format.<br>
+3.1 Interactive Graphs and Maps used for the Visualisations from our Juypter Notebook Map.ipynb and Graph.ipynb:<br>
 -Graph Annual Emission CO2 Coal and Flaring <br>
 -Graph Annual Emission CO2 Fuel and Gas <br>
 -Map of Total Annual of Emission in the World, 1965-2022 (tons) <br>
 -Graph Electricity Production from Wind Energy and Solar Photovoltaic (tons) <br>
 -Graph others Renewables Energy excluding Bioenergy and Renewable (TWh Growth-equivalent) (tons) <br> 
 -Map Renewable Electricity Production (percent)
+3.2 Powerpoint Presentation made with Portfolio.ipynb
        
 ## Project Tools
-The primary tool used for data analysis in this project is a Jupyter Notebook titled `DA_Course_Cleaning.ipynb`. This notebook contains all the data cleaning, preprocessing, and analysis steps.
+The primary tool used for data analysis in this project is a Jupyter Notebook titled `DA_Course_Cleaning.ipynb`. This notebook contains all the data cleaning, preprocessing, and analysis steps. The others two important Notebooks used for the Visualisation are `Graph.ipynb` and `Map.ipynb`. 
 
 ## Tasks
-- Finding a Team, Topic and Ressources
+- Finding a Team, Topic and Ressources (Start 16.10.2023)
 - Data Collection and Cleaning
 - Exploratory Data Analysis
 - Visualization and Reporting
 - Prediction and Forecasting
-- Final Presenttation and Exam
+- Final Presentation and Exam to Stackfuel Audience on 3.11.2023
