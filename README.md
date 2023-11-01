@@ -6,7 +6,7 @@
 ## Problem Description
 This project aims to shed light on the critical concerns related to carbon dioxide emissions, global warming, and the emergent renewable energy sector. By analyzing data and trends, we hope to provide insights and solutions to combat global warming and promote sustainable energy.
 
-## Impact
+## Goals
 - **Educate the Masses**: Through this analysis, we aim to educate the general public about the dangers of unchecked CO2 emissions and the urgency of the global warming crisis.
 - **Promote Renewable Energy**: By highlighting the potential of the renewable energy sector, we hope to accelerate its adoption globally.
 - **Informed Decision Making**: Governments and businesses can use this analysis to make informed decisions regarding energy policies and investments.
