@@ -16,7 +16,14 @@ Our approach to this project involves:
 1. Collecting data on energy consumption, CO2 emissions, and renewable energy growth.
 2. Analyzing the collected data to identify trends and patterns.
 3. Presenting our findings in an intuitive and easy-to-understand format.
-
+3.1 Interactive Graphs and Maps used for the Visualisations:
+-Graph Annual Emission CO2 Coal and Flaring
+-Graph Annual Emission CO2 Fuel and Gas
+-Map of Total Annual of Emission in the World, 1965-2022 (tons)
+-Graph Electricity Production from Wind Energy and Solar Photovoltaic (tons)
+-Graph others Renewables Energy excluding Bioenergy and Renewable (TWh Growth-equivalent) (tons) 
+-Map Renewable Electricity Production (percent)
+       
 ## Project Tools
 The primary tool used for data analysis in this project is a Jupyter Notebook titled `DA_Course_Cleaning.ipynb`. This notebook contains all the data cleaning, preprocessing, and analysis steps.
 
