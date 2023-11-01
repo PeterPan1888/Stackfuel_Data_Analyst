@@ -17,19 +17,19 @@ Our approach to this project involves:
 2. Analyzing the collected data to identify trends and patterns.
 3. Presenting our findings in an intuitive and easy-to-understand format.<br>
 3.1 Interactive Graphs and Maps used for the Visualisations from our Juypter Notebook Map.ipynb and Graph.ipynb:<br>
--Graph Annual Emission CO2 Coal and Flaring <br>
--Graph Annual Emission CO2 Fuel and Gas <br>
+-Graph Annual Emission CO2 Coal and Flaring (tons) <br>
+-Graph Annual Emission CO2 Fuel and Gas (tons) <br>
 -Map of Total Annual of Emission in the World, 1965-2022 (tons) <br>
 -Graph Electricity Production from Wind Energy and Solar Photovoltaic (tons) <br>
 -Graph others Renewables Energy excluding Bioenergy and Renewable (TWh Growth-equivalent) (tons) <br> 
--Map Renewable Electricity Production (percent)
+-Map Renewable Electricity Production (percent)<br>
 3.2 Powerpoint Presentation made with Portfolio.ipynb
        
 ## Project Tools
 The primary tool used for data analysis in this project is a Jupyter Notebook titled `DA_Course_Cleaning.ipynb`. This notebook contains all the data cleaning, preprocessing, and analysis steps. The others two important Notebooks used for the Visualisation are `Graph.ipynb` and `Map.ipynb`. 
 
 ## Tasks
-- Finding a Team, Topic and Ressources (Start 16.10.2023)
+- Finding a Team, Topic and Ressources with Team of 3 Persons: Mr. Balaji, Mr. Arne and Mr. Harry, Start on 16.10.2023
 - Data Collection and Cleaning
 - Exploratory Data Analysis
 - Visualization and Reporting
