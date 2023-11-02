@@ -13,7 +13,7 @@ This project aims to shed light on the critical concerns related to carbon dioxi
 
 ## Approach
 Our approach to this project involves:
-1. Collecting Data on energy consumption, CO2 emissions, and renewable energy growth from Datasets issued mainly from the following Portals "Ourworldindata" (https://ourworldindata.org/), Search engine "Google Dataset Search", International Energy Agency/IEA (https://www.iea.org/), (globalcarbonbudget.org), (irena.org), (energyinst.org), (ember-climate.org), (worldbank.org), (zenodo.org).
+1. Collecting Data on energy consumption, CO2 emissions, and renewable energy growth from Datasets issued mainly from the following Portals "Ourworldindata" (https://ourworldindata.org/), Search engine "Google Dataset Search", International Energy Agency/IEA (https://www.iea.org/), (https://globalcarbonbudget.org/), (https://irena.org/), (https://energyinst.org/), (https://ember-climate.org/), (https://worldbank.org/), (https://zenodo.org/).
 2. Analyzing the collected data to identify trends and patterns.
 3. Presenting our findings in an intuitive and easy-to-understand format.<br>
 3.1 Interactive Graphs and Maps used for the Visualisations from our Juypter Notebook Map.ipynb and Graph.ipynb:<br>
