@@ -17,12 +17,13 @@ Our approach to this project involves:
 2. Analyzing the collected data to identify trends and patterns.
 3. Presenting our findings in an intuitive and easy-to-understand format.<br>
 3.1 Interactive Graphs and Maps used for the Visualisations from our Juypter Notebook Map.ipynb and Graph.ipynb:<br>
--Graph Annual Emission CO2 Coal and Flaring (tons) <br>
--Graph Annual Emission CO2 Fuel and Gas (tons) <br>
--Map of Total Annual of Emission in the World, 1965-2022 (tons) <br>
--Graph Electricity Production from Wind Energy and Solar Photovoltaic (tons) <br>
--Graph others Renewables Energy excluding Bioenergy and Renewable (TWh Growth-equivalent) (tons) <br> 
--Map Renewable Electricity Production (percent)<br>
+- Graph Annual Emission CO2 from Coal and Flaring (tons)
+- Graph Annual Emission CO2 from Fuel and Gas (tons)
+- Map of Total Annual Emission in the World, 1965-2022 (tons)
+- Graph Electricity Production from Wind Energy and Solar Photovoltaic (tons)
+- Graph Others Renewables Energy excluding Bioenergy and Renewable (TWh Growth-equivalent) (tons)
+- Map Renewable Electricity Production (percent)
+
 3.2 Powerpoint Presentation made with Portfolio.ipynb
        
 ## Project Tools
