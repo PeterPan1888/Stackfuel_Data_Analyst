@@ -16,7 +16,7 @@ Our approach to this project involves:
 1. Collecting Data on energy consumption, CO2 emissions, and renewable energy growth from Datasets issued mainly from the following Portals "Ourworldindata" (https://ourworldindata.org/), Search engine "Google Dataset Search", International Energy Agency/IEA (https://www.iea.org/), (https://globalcarbonbudget.org/), (https://irena.org/), (https://energyinst.org/), (https://ember-climate.org/), (https://worldbank.org/), (https://zenodo.org/).
 2. Analyzing the collected data to identify trends and patterns.
 3. Presenting our findings in an intuitive and easy-to-understand format.<br>
-3.1 Interactive Graphs and Maps used for the Visualisations from our Juypter Notebook Map.ipynb and Graph.ipynb (in the folder _old):<br>
+3.1 Interactive Graphs and Maps used for the Visualisations from our Juypter Notebook Map.ipynb and Graph.ipynb:<br>
 - Graph Annual Emission CO2 from Coal and Flaring (tons)
 - Graph Annual Emission CO2 from Fuel and Gas (tons)
 - Map of Total Annual Emission in the World, 1965-2022 (tons)
