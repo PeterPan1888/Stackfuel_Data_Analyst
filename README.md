@@ -22,7 +22,7 @@ Our approach to this project involves:
 - Map of Total Annual Emission in the World, 1965-2022 (tons)
 - Graph Electricity Production from Wind Energy and Solar Photovoltaic (tons)
 - Graph Others Renewables Energy excluding Bioenergy and Renewable (TWh Growth-equivalent) (tons)
-- Map Renewable Electricity Production (percent)
+- Map Renewable Electricity Production (percent).<br>
 3.2 Powerpoint Presentation (Coded in the "renewablenergy.ipynb")
        
 ## Project Tools
