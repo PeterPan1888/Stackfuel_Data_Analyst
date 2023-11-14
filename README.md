@@ -23,7 +23,7 @@ Our approach to this project involves:
 - Graph Electricity Production from Wind Energy and Solar Photovoltaic (tons)
 - Graph Others Renewables Energy excluding Bioenergy and Renewable (TWh Growth-equivalent) (tons)
 - Map Renewable Electricity Production (percent).<br>
-3.2 Powerpoint Presentation (Coded in the "renewablenergy.ipynb")
+3.2 Final Powerpoint Presentation (Powerpoint Renewable Energy .pptx)
        
 ## Project Tools
 The primary tool used for data analysis in this project is a Jupyter Notebook titled `DA_Course_Cleaning.ipynb`. This notebook contains all the data cleaning, preprocessing, and analysis steps. The other main important Notebook used for the Visualisation of `Graph.ipynb`, `Map.ipynb` and `Powerpoint.ipynb` is in a single script file `renewablenergy.ipynb`. 
