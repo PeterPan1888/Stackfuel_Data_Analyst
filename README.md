@@ -22,12 +22,11 @@ Our approach to this project involves:
 - Map of Total Annual Emission in the World, 1965-2022 (tons)
 - Graph Electricity Production from Wind Energy and Solar Photovoltaic (tons)
 - Graph Others Renewables Energy excluding Bioenergy and Renewable (TWh Growth-equivalent) (tons)
-- Map Renewable Electricity Production (percent)
-
-3.2 Powerpoint Presentation made with Portfolio.ipynb
+- Map Renewable Electricity Production (percent).<br>
+3.2 Powerpoint Presentation (Coded in the "renewablenergy.ipynb")
        
 ## Project Tools
-The primary tool used for data analysis in this project is a Jupyter Notebook titled `DA_Course_Cleaning.ipynb`. This notebook contains all the data cleaning, preprocessing, and analysis steps. The others two important Notebooks used for the Visualisation are `Graph.ipynb` and `Map.ipynb`. 
+The primary tool used for data analysis in this project is a Jupyter Notebook titled `DA_Course_Cleaning.ipynb`. This notebook contains all the data cleaning, preprocessing, and analysis steps. The other main important Notebook used for the Visualisation of `Graph.ipynb`, `Map.ipynb` and `Powerpoint.ipynb` is in a single script file `renewablenergy.ipynb`. 
 
 ## Tasks
 - Finding a Team, Topic and Ressources with Team of 3 Persons: Mr. Balaji, Mr. Arne and Mr. Harry, Start on 16.10.2023
